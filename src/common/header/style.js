@@ -61,6 +61,10 @@ export const NavSearch = styled.input.attrs({placeholder:'搜索'})`
   &::placeholder{
     color:#999;
   }
+  &.focused{
+    width: 240px;
+   
+  }
 `
 
 export const Addition = styled.div`
@@ -89,13 +93,30 @@ export const Button = styled.div`
 export const SearchWarpper = styled.div`
   position:relative;
   float: left;
-   .iconfont{
-      position:absolute;
-      bottom: 0px;
-      right:5px;
-      width: 30px;
-      line-height: 30px;
-      text-align:center;
-      border-radius:15px;
-   }
+  .slide-enter{
+    transition:all .2s ease-out;
+  }
+  .slide-enter-active{
+    width: 240px;
+  }
+  .slide-exit{
+    transition: all .2s ease-out;
+  }
+  .slide-exit-active{
+    width: 160px;
+  }
+
+ .iconfont{
+    position:absolute;
+    bottom: 0px;
+    right:5px;
+    width: 30px;
+    line-height: 30px;
+    text-align:center;
+    border-radius:15px;
+    &.focused{
+      background:#999;
+      color:#fff;
+    }
+ }
 `
